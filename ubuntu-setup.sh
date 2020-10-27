@@ -3,11 +3,11 @@ echo 'export PATH="$HOME/anaconda3/envs/tensorflow_p36/bin:$PATH"' >> ~/.bashrc
 pkill -9 apt-get || true
 pkill -9 dpkg || true
 dpkg --configure -a
-add-apt-repository ppa:deadsnakes/ppa -y
-apt update
-apt install --assume-yes make python3-pip python3.8 libgmp-dev libmpfr-dev libmpc-dev python3.8-dev
-apt install s3fs
-apt update libcurl4
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update
+sudo apt install --assume-yes make python3-pip python3.8 libgmp-dev libmpfr-dev libmpc-dev python3.8-dev
+sudo apt install s3fs
+sudo apt update libcurl4
 rm -f /bin/python
 ln -s /usr/bin/python3.8 /bin/python
 python -m pip install --upgrade pip
